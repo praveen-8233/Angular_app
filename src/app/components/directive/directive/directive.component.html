@@ -1,0 +1,50 @@
+<div class="row pt-3">
+  <div class="col-3 text-center">
+    <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+    <button class="btn btn-primary mx-2" (click)="showDiv1()">Show</button>
+  </div>
+
+  <div class="col-3 text-center">
+    <button class="btn btn-danger" (click)="hideShowDiv2(false)">Hide</button>
+    <button class="btn btn-primary mx-2" (click)="hideShowDiv2(true)">Show</button>
+  </div>
+
+  <div class="col-3 text-center">
+    <input type="text" placeholder="Num 1" [(ngModel)]="num1">
+    <input type="text" placeholder="Num 2" [(ngModel)]="num2">
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-3" *ngIf="isDiv1Visible">
+    <div class="bg-primary p-3">Div 1</div>
+  </div>
+
+  <div class="col-3" *ngIf="isDiv2Visible">
+    <div class="bg-danger p-3">Div 2</div>
+  </div>
+
+  <div class="col-3" *ngIf="num1 == num2">
+    <div class="bg-success p-3">Div 3</div>
+  </div>
+</div>
+<div class="col-3">
+    <div class="row">
+        <div class ="col-6">
+            <label for="">Select Cast</label>
+            <select class="form-control" [(ngModel)]="selectedCaste">
+                <option>OBC</option>
+                <option>SC-NT</option>
+                <option>Open</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="col-6" *ngIf="selectedCaste == 'Other'">
+            <label for="Other">
+                <input type ="text" placeholder="Enter Other cast">
+            </label>
+        </div>
+    </div>
+</div>
+
+

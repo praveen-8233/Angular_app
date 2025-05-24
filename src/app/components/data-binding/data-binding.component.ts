@@ -12,6 +12,7 @@ courseName : string = "Angular 19";
 courseDuration: string = " 3 Hrs";
 myPlaceHolderText = "Enter Course Name";
 clsName = "bg-success";
+isActive = true;
 showWelcomeText (){
   alert("Welcome to Angular 19")
 }
